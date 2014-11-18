@@ -161,6 +161,10 @@
 
 - (void)_stopLocation
 {
+    // BIG CHANGE (ROMAN)
+    return;
+    // end of the big change
+    
     if (__locationStarted) {
         if (![self isLocationServicesEnabled]) {
             return;
@@ -191,6 +195,12 @@
             [self returnLocationInfo:[self.locationData.watchCallbacks objectForKey:timerId] andKeepCallback:YES];
         }
     } else {
+        
+        // BIG CHANGE (ROMAN)
+        return;
+        // end of the big change
+        
+        
         // No callbacks waiting on us anymore, turn off listening.
         [self _stopLocation];
     }
@@ -362,6 +372,7 @@
 
 - (void)onReset
 {
+    return;
     [self _stopLocation];
     [self.locationManager stopUpdatingHeading];
 }
