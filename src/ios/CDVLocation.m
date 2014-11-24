@@ -161,10 +161,7 @@
 
 - (void)_stopLocation
 {
-    // BIG CHANGE (ROMAN)
-    return;
-    // end of the big change
-    
+   
     if (__locationStarted) {
         if (![self isLocationServicesEnabled]) {
             return;
@@ -372,7 +369,6 @@
 
 - (void)onReset
 {
-    return;
     [self _stopLocation];
     [self.locationManager stopUpdatingHeading];
 }
