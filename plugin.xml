@@ -79,8 +79,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <source-file src="src/ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
         
-        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string></string>
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+            <string>App's core functionality depends on the availability of device's location, therefore we ask kindly ask you to authorize this request.</string>
         </config-file>
         
     </platform>
